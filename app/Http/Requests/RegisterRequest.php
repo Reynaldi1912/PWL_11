@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
 class RegisterRequest extends ApiRequest
 {
     /**
@@ -24,7 +22,7 @@ class RegisterRequest extends ApiRequest
     public function rules()
     {
         return [
-            'name' => 'reuqired|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8'
         ];
